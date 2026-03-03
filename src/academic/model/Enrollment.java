@@ -56,13 +56,11 @@ public class Enrollment {
     }
 
     /**
-     * Mengembalikan representasi Enrollment dalam format yang diminta oleh autograder:
-     * CourseID|StudentID|AcademicYear|Grade
-     * CATATAN PENTING: Bidang 'semester' DIHAPUS dari output agar sesuai dengan ekspektasi autograder.
+     * Mengembalikan representasi Enrollment dalam format yang diminta:
+     * CourseID|StudentID|AcademicYear|Semester|Grade
      * @return String representasi Enrollment
      */
     public String getFormattedOutput() {
-        // PERBAIKAN: Hapus 'semester' dari format output
-        return String.format("%s|%s|%s|%s", courseId, studentId, academicYear, grade);
+        return String.format("%s|%s|%s|%s|%s", courseId, studentId, academicYear, semester, grade);
     }
 }
